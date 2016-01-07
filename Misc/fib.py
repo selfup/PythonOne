@@ -20,5 +20,5 @@ try:
     print fibby(21)
 
 except ValueError:
-    print "\n\nPlease add a number after the file name with a space :)\n\n**"
+    print "\n\nPlease add a number after the file name with a space before it :)\n\n**"
     print "  example: python fib.py 23\n**\n"
