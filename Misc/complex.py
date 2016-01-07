@@ -1,10 +1,14 @@
-from math import sqrt
-from sys import argv
+import sys, os
 
-script, num = argv
+o = os.system
 
-def fib(num):
-    n = int(num)
-    return ((1+sqrt(5))**n-(1-sqrt(5))**n)/(2**n*sqrt(5))
+pwd = o('pwd')
 
-print fib(num)
+o('rm -rf ruby_store.rb')
+o('echo class RubyStore >> ruby_store.rb')
+o('echo def data >> ruby_store.rb')
+o('echo 100 >> ruby_store.rb')
+o('echo end >> ruby_store.rb')
+o('echo end >> ruby_store.rb')
+o('echo puts RubyStore.new.data >> ruby_store.rb')
+o('ruby ruby_store.rb')
