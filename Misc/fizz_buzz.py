@@ -1,6 +1,6 @@
 class Fizz:
-    def __init__(self, n):
-        self.n = n
+    def __init__(self, range_for_n):
+        self.range_for_n = range_for_n
 
     def print_i_condition(self, i, n, n2):
         if (i % 5 != 0 and i % 3 != 0):
@@ -27,7 +27,7 @@ class Fizz:
         self.print_i_condition(i, 5, 3)
 
     def output(self):
-        n = self.n
+        n = self.range_for_n
         for i in range(n):
             self.fizz_buzz(i)
             self.fizz(i)
