@@ -10,6 +10,6 @@ def make_pi(n):
         e_arr.append(d)
 
     e_arr.pop(1)
-    print e_arr[:n]
-    
+    print ''.join(e_arr[:n])
+
 make_pi(4)
