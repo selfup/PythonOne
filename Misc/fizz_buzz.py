@@ -1,6 +1,9 @@
 class Fizz:
-    def __init__(self, range_for_n):
-        self.range_for_n = range_for_n
+    def __init__(self, range_for_n, first_word, second_word):
+        self.range_for_n = (range_for_n + 1)
+        self.first_word = first_word
+        self.second_word = second_word
+        self.biggest_word = ''.join([first_word, second_word])
 
     def print_i_condition(self, i, n, n2):
         if (i % 5 != 0 and i % 3 != 0):
@@ -10,18 +13,18 @@ class Fizz:
         if (i % n == 0 and i % n2 != 0):
             print message
 
-    def fizz_buzz_condition(self, i, n, message):
+    def fizz_buzz_condition(self, i, n):
         if (i % 15 == 0):
-            print message
+            print self.biggest_word
 
     def fizz_buzz(self, i):
-        self.fizz_buzz_condition(i, 15, 'FizzBuzz')
+        self.fizz_buzz_condition(i, 15)
 
     def fizz(self, i):
-        self.fizz_or_buzz_condition(i, 3, 5, 'Fizz')
+        self.fizz_or_buzz_condition(i, 3, 5, self.first_word)
 
     def buzz(self, i):
-        self.fizz_or_buzz_condition(i, 5, 3, 'Buzz')
+        self.fizz_or_buzz_condition(i, 5, 3, self.second_word)
 
     def print_i(self, i):
         self.print_i_condition(i, 5, 3)
@@ -34,4 +37,6 @@ class Fizz:
             self.buzz(i)
             self.print_i(i)
 
-Fizz(16).output()
+Fizz(15, 'Fizz', 'Buzz').output()
+print '\n'
+Fizz(15, 'Hello', 'Goodbye').output()
