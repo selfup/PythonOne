@@ -1,5 +1,3 @@
-# coding: interpy
-
 import sys, os, subprocess
 
 o = os.system
@@ -13,4 +11,4 @@ o('echo 100.to_s >> ruby_store.rb')
 o('echo end >> ruby_store.rb')
 o('echo end >> ruby_store.rb')
 o('echo puts RubyStore.new.data >> ruby_store.rb')
-o("python fib.py  #{output}" )
+o("python fib.py  %s" % output )
